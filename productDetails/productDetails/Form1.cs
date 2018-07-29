@@ -1,4 +1,5 @@
-﻿using System;
+﻿using productDetails.EF;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,9 @@ namespace productDetails
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var context = new deptconn();
+
+
+            var context = new DeptEntity();
             Department dept = new Department();
             context.Departments.Add(dept);
             dept.ID = Convert.ToInt32(id.Text);
